@@ -55,36 +55,28 @@ if (keyboard_check(vk_down))
     y=y+2;
     inst = instance_place(x, y, Border);
     if inst != noone
-    {
         y = inst.y - 16;
-    }
 }
 if (keyboard_check(vk_up))
 {
     y=y-2;
     inst = instance_place(x, y, Border);
     if inst != noone
-    {
         y = inst.y + 32;
-    }
 }
 if (keyboard_check(vk_left))
 {
     x=x-2;
         inst = instance_place(x, y, Border);
     if inst != noone
-    {
         x = inst.x + 32;
-    }
 }
 if (keyboard_check(vk_right))
 {
     x=x+2;
         inst = instance_place(x, y, Border);
     if inst != noone
-    {
         x = inst.x - 16;
-    }
 }
 
 build();
