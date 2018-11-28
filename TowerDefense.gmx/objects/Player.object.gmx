@@ -49,22 +49,49 @@ image_yscale /= 2;
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>
+            <string>var inst;
+ 
+// if inst != noone
+//    {    hp -= inst.dmg;
+//    with (inst) instance_destroy();
+//    }
+
+
 if (keyboard_check(vk_down))
 {
     y=y+5;
+    inst = instance_place(x, y, Border);
+    if inst != noone
+    {
+        y = inst.y - 16;
+    }
 }
 if (keyboard_check(vk_up))
 {
     y=y-5;
+    inst = instance_place(x, y, Border);
+    if inst != noone
+    {
+        y = inst.y + 32;
+    }
 }
 if (keyboard_check(vk_left))
 {
     x=x-5;
+        inst = instance_place(x, y, Border);
+    if inst != noone
+    {
+        x = inst.x + 32;
+    }
 }
 if (keyboard_check(vk_right))
 {
     x=x+5;
+        inst = instance_place(x, y, Border);
+    if inst != noone
+    {
+        x = inst.x - 16;
+    }
 }
 </string>
           </argument>
